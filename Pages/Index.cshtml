@@ -3,32 +3,58 @@
 @{
     ViewData["Title"] = "Calculator";
 }
-<h1>Hello World</h1>
-<nav>
-  <div class="nav nav-tabs" id="nav-tab" role="tablist">
-    <button class="nav-link " id="nav-history-tab" data-bs-toggle="tab" data-bs-target="#nav-history" type="button" role="tab" aria-controls="nav-history" aria-selected="true">History</button>
-    <button class="nav-link active" id="nav-calculator-tab" data-bs-toggle="tab" data-bs-target="#nav-calculator" type="button" role="tab" aria-controls="nav-calculator" aria-selected="true">Calculate</button>
-    <button class="nav-link " id="nav-showone-tab" data-bs-toggle="tab" data-bs-target="#nav-showone" type="button" role="tab" aria-controls="nav-showone" aria-selected="true">Show one element</button>
-    <button class="nav-link " id="nav-delone-tab" data-bs-toggle="tab" data-bs-target="#nav-delone" type="button" role="tab" aria-controls="nav-delone" aria-selected="true">Delete one element</button>
-  </div>
-</nav>
-<div class="tab-content" id="nav-tabContent">
-    <div class="tab-pane fade" id="nav-history" role="tabpanel" aria-labelledby="nav-history-tab">
-        <div class="allResults"></div>
-    </div>
-    <div class="tab-pane fade " id="nav-calculator" role="tabpanel" aria-labelledby="nav-calculator-tab">
-        <input type="text" id="operacja">
-        <button id="calculate">Oblicz</button>
-        <p id="resulte"></p>
-    </div>
-    <div class="tab-pane fade" id="nav-showone" role="tabpanel" aria-labelledby="nav-showone-tab">
-        <input type="text" id="idOfGet">
-        <button id="getById">Get elem by id</button><br>
-        <p id="resultbyid"></p>
-    </div>
-    <div class="tab-pane fade" id="nav-delone" role="tabpanel" aria-labelledby="nav-delone-tab">
-        <input type="text" id="deleteId">
-        <button id="deleteButton">Delete by id</button>
-        <p id="deleted"></p>
+<div class="positioning">
+    <h1 class="ccorners2">Calculator</h1>
+    <div class="ccorners">
+        <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link " id="nav-history-tab" data-bs-toggle="tab" data-bs-target="#nav-history" type="button" role="tab" aria-controls="nav-history" aria-selected="true">History</button>
+            <button class="nav-link active" id="nav-calculator-tab" data-bs-toggle="tab" data-bs-target="#nav-calculator" type="button" role="tab" aria-controls="nav-calculator" aria-selected="true">Calculate</button>
+            <button class="nav-link " id="nav-showone-tab" data-bs-toggle="tab" data-bs-target="#nav-showone" type="button" role="tab" aria-controls="nav-showone" aria-selected="true">Show one element</button>
+            <button class="nav-link " id="nav-delone-tab" data-bs-toggle="tab" data-bs-target="#nav-delone" type="button" role="tab" aria-controls="nav-delone" aria-selected="true">Delete one element</button>
+        </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade" id="nav-history" role="tabpanel" aria-labelledby="nav-history-tab">
+                <p>Click on result to copy id</p>
+                <div class="allResults"></div>
+            </div>
+            <div class="tab-pane fade " id="nav-calculator" role="tabpanel" aria-labelledby="nav-calculator-tab">
+                <div class="form">
+                    <input id="operacja" type="text" name="text" autocomplete="off" required />
+                    <label for="text" class="label-name">
+                        <span class="content-name">
+                        Put operation here
+                        </span>
+                    </label>
+                </div>
+                <button id="calculate">Oblicz</button>
+                <p id="resulte"></p>
+            </div>
+            <div class="tab-pane fade" id="nav-showone" role="tabpanel" aria-labelledby="nav-showone-tab">
+                <div class="form">
+                    <input id="idOfGet" type="text" name="text" autocomplete="off" required />
+                    <label for="text" class="label-name">
+                        <span class="content-name">
+                        Put id here
+                        </span>
+                    </label>
+                </div>
+                <button id="getById">Get elem by id</button><br>
+                <p id="resultbyid"></p>
+            </div>
+            <div class="tab-pane fade" id="nav-delone" role="tabpanel" aria-labelledby="nav-delone-tab">
+                <div class="form">
+                    <input id="deleteId" type="text" name="text" autocomplete="off" required />
+                    <label for="text" class="label-name">
+                        <span class="content-name">
+                        Put id here
+                        </span>
+                    </label>
+                </div>
+                <button id="deleteButton">Delete by id</button>
+                <p id="deleted"></p>
+            </div>
+        </div>
     </div>
 </div>
